@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Blog</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <meta name="description" content="Finance Insights - Your go-to source for financial tips, advice, and insights.">
+    <meta name="keywords" content="finance, budgeting, saving, investing, personal finance">
+
+    <script>
+        function calculateSavings() {
+            const income = document.getElementById('income').value;
+            const expenses = document.getElementById('expenses').value;
+            const savings = income - expenses;
+            alert('Your estimated savings: $' + savings);
+        }
+
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Finance Insights</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Finance Insights</h2>
+            <p>Your go-to source for financial tips, advice, and insights.</p>
+        </section>
+
+        <section id="blog">
+            <h2>Latest Blog Posts</h2>
+            <article>
+                <h3><a href="#" onclick="redirectTo('https://www.cnbc.com/select/how-to-save-on-groceries/')">10 Ways to Save Money on Groceries</a></h3>
+                <p>Discover practical tips to cut down your grocery bills without sacrificing quality.</p>
+            </article>
+            <article>
+                <h3><a href="#" onclick="redirectTo('https://sidehustleschool.com/ideas/')">How to Start a Side Hustle</a></h3>
+                <p>Learn how to turn your skills into a profitable side business.</p>
+            </article>
+            <article>
+                <h3><a href="#" onclick="redirectTo('https://www.pcmag.com/picks/the-best-personal-finance-services')">The Best Budgeting Apps of 2024</a></h3>
+                <p>Find out which budgeting apps can help you manage your finances effectively.</p>
+            </article>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are passionate about helping individuals achieve financial literacy and independence.</p>
+        </section>
+    </main>
+
+
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form onsubmit="return false;">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit" onclick="calculateSavings()">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Finance Insights. All rights reserved.</p>
+        <p><a href="#contact">Contact Us</a></p>
+        <div>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
